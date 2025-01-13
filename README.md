@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+# React Props and Components Practice
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a React project that demonstrates the use of props and components to build reusable UI elements. It includes solutions to three exercises that showcase creating components with props and combining them in the `App.js` file.
 
-## Available Scripts
+## Exercises Overview
 
-In the project directory, you can run:
+### Exercise 1: ColorBlock Component
+**Task**: Create a `ColorBlock` component that accepts a prop called `colors` and displays a square (50x50 pixels) with the specified background color. If no color is provided, the square defaults to gray.
 
-### `npm start`
+- **Implementation**:
+  - Inline CSS is used to set the background color.
+  - Example usage:
+    ```jsx
+    <ColorBlock colors="pink" />
+    <ColorBlock /> // Defaults to gray
+    ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Exercise 2: ActionButton Component
+**Task**: Create an `ActionButton` component that accepts two props:
+1. `label` - Text displayed on the button.
+2. `onAction` - A function that executes when the button is clicked.
 
-### `npm test`
+- **Implementation**:
+  - The `onAction` prop is connected to the button's `onClick` event handler.
+  - Example usage:
+    ```jsx
+    <ActionButton label="Click me" onAction={() => alert("Button clicked!")} />
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+### Exercise 3: ImageWithCaption Component
+**Task**: Create an `ImageWithCaption` component that accepts two props:
+1. `src` - URL of the image.
+2. `caption` - Text displayed as a caption below the image.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If the `src` prop is not provided, the text "Image not available" is displayed instead.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Implementation**:
+  - Conditional rendering is used to check for the presence of `src`.
+  - Example usage:
+    ```jsx
+    <ImageWithCaption src="https://via.placeholder.com/150" caption="Sample Image" />
+    <ImageWithCaption /> // Displays "Image not available"
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```plaintext
+React-Props-and-Components-Practice/
+├── node_modules/
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   ├── robots.txt
+├── src/
+│   ├── components/
+│   │   ├── ActionButton.jsx
+│   │   ├── ColorBlock.jsx
+│   │   ├── ImageWithCaption.jsx
+│   ├── App.js
+│   ├── index.css
+│   ├── index.js
+├── .gitignore
+├── package-lock.json
+├── package.json
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Components**:
+  - `ColorBlock.jsx`: Displays a colored square.
+  - `ActionButton.jsx`: A customizable button with a click event.
+  - `ImageWithCaption.jsx`: Displays an image with an optional caption.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Integration**: All components are combined and rendered in `App.js`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## How to Run
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-### Code Splitting
+4. Open your browser and navigate to `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Demo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The project displays:
+1. A `ColorBlock` component with and without a provided color.
+2. An `ActionButton` that triggers an alert when clicked.
+3. An `ImageWithCaption` component displaying an image with a caption and a fallback message when no image is provided.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Notes
 
-### Advanced Configuration
+- This project is designed to practice React fundamentals, focusing on props and reusable components.
+- The css isn't the main focuse of the tasks.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+Have a great day ♡
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![CuteCat](https://github.com/user-attachments/assets/80f4cce6-c461-4bed-beae-01321935bd39)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
