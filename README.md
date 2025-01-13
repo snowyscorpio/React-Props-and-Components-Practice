@@ -111,7 +111,7 @@ The project displays:
 ## Notes
 
 - This project is designed to practice React fundamentals, focusing on props and reusable components.
-- The css isn't the main focuse of the tasks.
+- The css isn't the main focuse of the tasks that's why it's lacking of design.
 
 
 Have a great day ♡
