@@ -84,7 +84,7 @@ React-Props-and-Components-Practice/
 
 ## How to Run
 
-1. Clone the repository
+1. Download the project as a ZIP file and extract it.
 2. Install dependencies:
    ```bash
    npm install
